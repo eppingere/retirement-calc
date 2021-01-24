@@ -24,12 +24,9 @@ YEARS_TO_WITHDRAWL = int(
 NUMBER_OF_YEARS_LIVE_ON_RETIREMENT = int(
     input("how long do you expect on live after you retire (years): "))
 
-<<<<<<< HEAD
 CURRENT_401k_VALUE = int(
     input("what is the current value of your 401k (dollars): "))
 
-=======
->>>>>>> aa365264a8cdeab53ab0fb1377c4033cc15b317c
 # my guess at the highest taxes can be in the future (feel free to make them lower) if you think that taxes will different in the future
 WITHDRAWL_GAINS_TAX_RATE = 0.2  # future capital gains tax?
 FUTURE_TAX_RATES = [
@@ -89,12 +86,9 @@ def _401k_performance():
     total_expected_401k = sum((LIMIT_CONTRIBUTION * (1.02 ** (YEARS_TO_WITHDRAWL - i))) *
                               ((1 + EXPECTED_INVESTMENT_RATE) ** i) for i in range(YEARS_TO_WITHDRAWL))
 
-<<<<<<< HEAD
     total_expected_401k += CURRENT_401k_VALUE * \
         ((1 + EXPECTED_INVESTMENT_RATE) ** YEARS_TO_WITHDRAWL)
 
-=======
->>>>>>> aa365264a8cdeab53ab0fb1377c4033cc15b317c
     # you withdraw the same amount every year of retirement (plus 10 that your heirs can withdraw)
     annual_withdrawl = total_expected_401k / \
         (NUMBER_OF_YEARS_LIVE_ON_RETIREMENT + 10)
@@ -141,10 +135,7 @@ def main():
         "None (invest on your own)": no_retirement_performance
     }
 
-<<<<<<< HEAD
     print()
-=======
->>>>>>> aa365264a8cdeab53ab0fb1377c4033cc15b317c
     print("These are the expected performance of this years retirement investment")
     for option in options:
         print(option + ":")
